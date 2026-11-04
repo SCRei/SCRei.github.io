@@ -1,0 +1,275 @@
+@import 'styles_minisite.css?1';
+
+h4 {
+	color: var(--urca-text-color);
+}
+
+.accordeon .accordion-body h2, .accordeon .accordion-body .h2, .accordeon .accordion-body h4, .accordeon .accordion-body .h4, .accordeon .accordion-body h6, .accordeon .accordion-body .h6 {
+	color: var(--urca-text-color);
+}
+
+
+.trame-wrapper:before {
+    background-color: #7ec826;
+}
+a {
+	color: #7ec826;
+}
+::selection {
+	background: #7ec826;
+	color: #FFF;
+}
+::-moz-selection {
+	background: #7ec826;
+	color: #FFF;
+}
+ul:not(.list-unstyled) li:before {
+	color: #7ec826 !important;
+}
+
+
+
+h2, h3 {
+	color: #7ec826;
+}
+
+.trame:after {
+	background-color: #7ec826;
+}
+.btn.btn-primary, .btn.btn-primary:hover {
+	background-color: #7ec826;
+}
+.custom-link::before {
+	background-color: #7ec826;
+}
+body {
+	--urca-secondary-to-dark: #7ec826;
+}
+
+.accordeon .accordion-body h2, .accordeon .accordion-body .h2, .accordeon .accordion-body h3, .accordeon .accordion-body .h3 {
+color: #7ec826;
+}
+
+
+
+
+a:hover, a:active, a:focus, .breadcrumb a:hover, .breadcrumb a:active, .breadcrumb a:focus {
+	color: #7ec826;
+}
+
+
+
+
+
+#sidebarMenu .menu-item.open .menu-item-header a.active,
+#sidebarMenu .menu-item.open .menu-item-body a.active,
+#sidebarMenu .menu-item-header button:hover,
+#sidebarMenu .menu-item-header a:hover {
+	color: #7ec826;
+}
+
+
+
+a.btn.btn-primary, #sidebarButton, #sidebarClose {
+	background-color: #7ec826;
+}
+
+
+
+header#mainHeader.header-minisite .header-heading {
+	color: #7ec826;
+}
+
+
+
+#pageBanner .content-wrapper:before,
+.full-with-text-column.content-overflowed .content-wrapper:before,
+.slider-text-image .content-wrapper:before,
+.para-container .text-start:before,
+.para-container .text-center:before,
+.para-container .text-center:after,
+.para-container .text-end:before,
+.quote .author-picture-wrapper:before,
+#homeSlider .content-wrapper:before,
+.footer-links ul:before,
+.heading-underlined:after,
+.key-figures {
+	background-color: #027937;
+}
+#organisationManager,
+#organisationManager:before,
+.contains-frame:before,
+.three-col .col-wrapper,
+.know-more .links-wrapper:after,
+.slider-simple-image .slider-head,
+.training-content .prerequisite,
+.quote .quote-bloc:before,
+.know-more .links-wrapper:after,
+.light-border,
+#homeNews:before,
+#digitalSpace .digital-space-wrapper,
+.training-content .prerequisite {
+	border-color: #027937;
+}
+
+
+
+hr.separator {
+	border-color: #027937;
+}
+
+
+
+
+
+
+
+.know-more .links-wrapper > a {
+	background-color: #027937;
+}
+
+
+
+.know-more .links-wrapper > a {
+	color: #ffffff;
+}
+
+
+
+#homeSlider .home-slider-container .container-arrow .icon {
+	color: #7ec826;
+}
+
+
+
+
+
+body.light-mode {
+	--urca-link-color: #7ec826;
+}
+body.light-mode .trame-wrapper:before {
+	background-color: #7ec826;
+}
+body.light-mode a {
+	color: #7ec826;
+}
+body.light-mode ::selection {
+	background: #7ec826;
+	color: #FFF;
+}
+body.light-mode ::-moz-selection {
+	background: #7ec826;
+	color: #FFF;
+}
+body.light-mode ul:not(.list-unstyled) li:before {
+	color: #7ec826 !important;
+}
+
+
+
+body.light-mode h2,
+body.light-mode h3 {
+	color: #7ec826;
+}
+
+body.light-mode .trame:after {
+	background-color: #7ec826;
+}
+body.light-mode .btn.btn-primary,
+body.light-mode .btn.btn-primary:hover {
+	background-color: #7ec826;
+}
+body.light-mode .custom-link::before {
+	background-color: #7ec826;
+}
+body.light-mode {
+	--urca-secondary-to-dark: #7ec826;
+}
+
+
+
+
+
+
+
+body.light-mode #sidebarMenu .menu-item.open .menu-item-header a.active,
+body.light-mode #sidebarMenu .menu-item.open .menu-item-body a.active,
+body.light-mode #sidebarMenu .menu-item-header button:hover,
+body.light-mode #sidebarMenu .menu-item-header a:hover {
+	color: #7ec826;
+}
+
+
+
+body.light-mode a.btn.btn-primary,
+body.light-mode #sidebarButton,
+body.light-mode #sidebarClose {
+	background-color: #7ec826;
+}
+
+
+
+body.light-mode header#mainHeader.header-minisite .header-heading {
+	color: #7ec826;
+}
+
+
+
+body.light-mode #pageBanner .content-wrapper:before,
+body.light-mode .full-with-text-column.content-overflowed .content-wrapper:before,
+body.light-mode .slider-text-image .content-wrapper:before,
+body.light-mode .para-container .text-start:before,
+body.light-mode .para-container .text-center:before,
+body.light-mode .para-container .text-center:after,
+body.light-mode .para-container .text-end:before,
+body.light-mode .quote .author-picture-wrapper:before,
+body.light-mode .footer-links ul:before,
+body.light-mode .heading-underlined:after,
+body.light-mode .key-figures {
+	background-color: #027937;
+}
+body.light-mode #organisationManager,
+body.light-mode #organisationManager:before,
+body.light-mode .contains-frame:before,
+body.light-mode .three-col .col-wrapper,
+body.light-mode .know-more .links-wrapper:after,
+body.light-mode .slider-simple-image .slider-head,
+body.light-mode .training-content .prerequisite,
+body.light-mode .quote .quote-bloc:before,
+body.light-mode .know-more .links-wrapper:after,
+body.light-mode .light-border,
+body.light-mode #homeNews:before,
+body.light-mode #digitalSpace .digital-space-wrapper,
+body.light-mode .training-content .prerequisite {
+	border-color: #027937;
+}
+
+
+
+body.light-mode hr.separator {
+	border-color: #027937;
+}
+
+
+
+
+
+
+
+body.light-mode .know-more .links-wrapper > a {
+	background-color: #027937;
+}
+
+
+
+body.light-mode .know-more .links-wrapper > a {
+	color: #ffffff;
+}
+
+
+
+body.light-mode #homeSlider .home-slider-container .container-arrow .icon {
+	color: #7ec826;
+}
+
+

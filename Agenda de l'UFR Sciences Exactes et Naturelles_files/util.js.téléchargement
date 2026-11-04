@@ -1,0 +1,76 @@
+function afficheMessage(messageText, messageType, messageTitle, containerId, asBlock, asTpl) {
+	// La méthode ci-dessous n'est appelée que lorsque la méthode qui affiche la popin d'authentification automatiquement existe
+	if ( typeof(afficheMessageSSO) !== "undefined" && $("#myModal").attr("class") !== "modal fade in" && $("#accordeonIdeoSSO .modal").length > 0 ) {
+		afficheMessageSSO();
+	}
+	return goIdeoportal.afficheMessage(messageText, messageType, messageTitle, containerId, asBlock, asTpl);
+}
+
+function popup(mapage, nom, yesno, largeur, hauteur) {
+	var top=(screen.height-hauteur)/2;
+	var left=(screen.width-largeur)/2;
+	var a;
+	var no;
+	var yes;
+	if (yesno == 'yes') {
+		a=window.open(mapage, nom, 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,left='+ left +',top='+ top +',width=' + largeur + ',height=' + hauteur);
+	}
+	else if (yesno == 'no') {
+		a=window.open(mapage, nom, 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,left='+ left +',top='+ top +',width=' + largeur + ',height=' + hauteur);
+	}
+}
+
+// Attention: la variable pour boucler s'appel num_script,
+// Il ne faut pas l'appeler i par exemple car en evaluant les scripts cette variable peut etre modifiee
+function setAndExecute(divId,innerHTML,goToAnchor) {
+	var div = document.getElementById(divId);
+	if ( div ) {
+		div.innerHTML = innerHTML;
+		var x = div.getElementsByTagName("script");
+		for(var num_script=0; num_script<x.length; num_script++)   {
+			eval(x[num_script].text);
+		}
+		if ( goToAnchor ) {
+			location.href = '#' + divId;
+		}
+	}
+}
+
+/* SCROLL */
+function scrollOn(id){
+	$('html,body').animate(
+		{scrollTop: $("#"+id).offset().top - 230 }
+	);
+}
+
+/* simulation click avec la touche entrée*/
+function formSubmitButton(event, target) {
+    if ((event.keyCode == 13 || event.which == 13) && !(event.srcElement && (event.srcElement.tagName.toLowerCase() == 'textarea'))) {
+        var defaultButton = window.document.getElementById(target);
+        if (defaultButton == 'undefined') {
+        	defaultButton = window.document.all[target];
+        }
+        if (defaultButton && typeof(defaultButton.click) != 'undefined') {
+            defaultButton.click();
+            event.cancelBubble = true;
+            if (event.stopPropagation) {
+            	event.stopPropagation();
+            }
+            return false;
+        }
+    }
+    return true;
+}
+
+function setCookie(asName, asValue) {
+    var today = new Date(), expires = new Date();
+    expires.setTime(today.getTime() + (365*24*60*60*1000));
+    document.cookie = asName + "=" + encodeURIComponent(asValue) + ";expires=" + expires.toGMTString() + ";path=/";
+}
+
+function hideMe(id) {
+	$('#'+id).hide();
+}
+function showMe(id) {
+	$('#'+id).show();
+}
