@@ -1,3 +1,4 @@
+@import url('https://googleapis.com');
 :root {
     --bg-dark: #121633;
     --bg-darker: #0d1026;
@@ -128,14 +129,14 @@ h1 {
 
 h2.section-subtitle {
     font-size: 1.3rem;
-    color: #ffffff;
+    color: #7ec826;
     margin: 35px 0 15px 0;
     font-weight: 700;
 }
 
 /* Programme */
 .schedule-title {
-    color: var(--accent-green);
+    color: #7ec826;
     font-size: 1.4rem;
     margin: 50px 0 20px 0;
     font-weight: 700;
