@@ -1,0 +1,359 @@
+:root {
+    --bg-dark: #121633;
+    --bg-darker: #0d1026;
+    --accent-green: #2ecc71;
+    --accent-emerald: #10b981;
+    --text-light: #ffffff;
+    --text-gray: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* En-tête : Logo URCA à gauche / Logo UFR SEN à droite */
+header {
+    background-color: var(--bg-darker);
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Styles pour les liens sur les logos */
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+
+.header-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Conteneur blanc pour les logos */
+.logo-bg-light {
+    background-color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+/* Fil d'ariane */
+.breadcrumb {
+    background-color: var(--bg-darker);
+    padding: 10px 30px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.breadcrumb a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Badge Date */
+.date-badge {
+    background-color: #ffffff;
+    color: var(--bg-dark);
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Titres */
+h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+.intro-text {
+    font-size: 1.05rem;
+    color: var(--text-gray);
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+h2.section-subtitle {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin: 35px 0 15px 0;
+    font-weight: 700;
+}
+
+/* Programme */
+.schedule-title {
+    color: var(--accent-green);
+    font-size: 1.4rem;
+    margin: 50px 0 20px 0;
+    font-weight: 700;
+}
+
+
+
+.day-heading {
+    font-size: 1.1rem;
+    margin: 25px 0 15px 0;
+    color: #ffffff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.day-heading::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #f1c40f; /* Jaune */
+    border-radius: 50%;
+}
+
+
+
+/* Tableau */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    padding: 12px 15px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: top;
+    color: #e2e8f0;
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.col-horaires {
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--text-light);
+    width: 15%;
+}
+
+.col-sequence {
+    width: 25%;
+}
+
+.col-intervenant {
+    width: 30%;
+    color: #cbd5e1;
+}
+
+.col-titre {
+    width: 30%;
+}
+
+/* Section Partenaires */
+.partners-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 50px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.partner-logo {
+    max-height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Organisation */
+.org-section {
+    margin: 40px 0;
+}
+
+.org-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+.org-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.org-section li {
+    margin-bottom: 8px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.org-section li::before {
+    content: "• ";
+    color: var(--accent-green);
+    font-weight: bold;
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--bg-darker);
+    padding: 50px 30px 30px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 80px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--text-light);
+    text-decoration: underline;
+}
+
+.social-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-title {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #212852;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent-green);
+    color: var(--bg-dark);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #64748b;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .social-col {
+        align-items: flex-start;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
