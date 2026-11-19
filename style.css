@@ -416,3 +416,11 @@ footer {
   .btn-plan-acces:active {
     transform: translateY(0);
   }
+.liste-parking {
+    padding-left: 24px; /* Retrait supplémentaire pour la seconde liste */
+  }
+
+  .liste-parking li::marker {
+    color: #f97316; /* Petite puce orange */
+    font-size: 0.9em;
+  }
