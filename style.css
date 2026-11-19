@@ -425,3 +425,19 @@ footer {
     color: #f97316; /* Petite puce orange */
     font-size: 0.9em;
   }
+.org-section ul.liste-parking {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    padding-left: 36px !important; /* Retrait visible depuis la marge gauche */
+    margin-left: 16px !important;
+  }
+
+  .org-section ul.liste-parking li {
+    display: list-item !important;
+    list-style-type: disc !important;
+  }
+
+  .org-section ul.liste-parking li::marker {
+    color: #f97316 !important;
+    font-size: 0.9em;
+  }
