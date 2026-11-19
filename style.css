@@ -416,7 +416,8 @@ footer {
   .btn-plan-acces:active {
     transform: translateY(0);
   }
-.liste-parking {
+
+  .liste-parking {
     padding-left: 24px; /* Retrait supplémentaire pour la seconde liste */
   }
 
