@@ -391,3 +391,28 @@ footer {
 .btn-enquete:hover svg {
   transform: translate(2px, -2px);
 }
+.btn-plan-acces {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background-color: #1e3a8a;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+    transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-plan-acces:hover {
+    background-color: #172554;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(30, 58, 138, 0.35);
+  }
+
+  .btn-plan-acces:active {
+    transform: translateY(0);
+  }
