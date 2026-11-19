@@ -441,3 +441,14 @@ footer {
     color: #f97316 !important;
     font-size: 0.9em;
   }
+.org-section ul.liste-parking li::before {
+    content: none !important;
+}
+    .org-section ul.liste-parking a {
+    color: #38bdf8;
+    text-decoration: underline;
+}
+
+.org-section ul.liste-parking a:hover {
+    color: #ffffff;
+}
