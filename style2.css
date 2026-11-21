@@ -14,6 +14,18 @@
       /* Durée totale de 3s pour bien voir les deux étapes du L */
       animation: trajectoireEnL 4s ease-in-out forwards;
     }
+ @media (max-width: 1366px) {
+        .image-animee {
+          width: 130px;
+        }
+      }
+
+  @media (max-width: 768px) {
+        .image-animee {
+          width: 90px;
+        }
+      }
+
 
     @keyframes trajectoireEnL {
       /* ÉTAPE 1 : Départ tout en haut au centre (hors écran) */
