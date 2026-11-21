@@ -1,4 +1,3 @@
-@import url('https://googleapis.com');
 :root {
     --bg-dark: #121633;
     --bg-darker: #0d1026;
@@ -21,24 +20,34 @@ body {
     line-height: 1.6;
 }
 
-/* En-tête : Logo URCA à gauche / Logo UFR SEN à droite */
+/* En-tête : Logo URCA à gauche / Contenu au centre / Logo UFR SEN à droite */
 header {
     background-color: var(--bg-darker);
     padding: 12px 30px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    gap: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-left {
     display: flex;
     align-items: center;
+    justify-self: start;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .header-right {
     display: flex;
     align-items: center;
+    justify-self: end;
     gap: 20px;
 }
 
@@ -142,8 +151,6 @@ h2.section-subtitle {
     font-weight: 700;
 }
 
-
-
 .day-heading {
     font-size: 1.1rem;
     margin: 25px 0 15px 0;
@@ -162,8 +169,6 @@ h2.section-subtitle {
     background-color: #f1c40f; /* Jaune */
     border-radius: 50%;
 }
-
-
 
 /* Tableau */
 .table-container {
@@ -265,6 +270,94 @@ tr:hover td {
     font-weight: bold;
 }
 
+.org-section ul.liste-parking {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 36px;
+    margin-left: 16px;
+}
+
+.org-section ul.liste-parking li {
+    display: list-item;
+}
+
+.org-section ul.liste-parking li::marker {
+    color: #f97316; /* Petite puce orange */
+    font-size: 0.9em;
+}
+
+.org-section ul.liste-parking li::before {
+    content: none;
+}
+
+.org-section ul.liste-parking a {
+    color: #38bdf8;
+    text-decoration: underline;
+}
+
+.org-section ul.liste-parking a:hover {
+    color: #ffffff;
+}
+
+/* Boutons */
+.btn-enquete {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+    transition: all 0.25s ease;
+}
+
+.btn-enquete:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3), 0 4px 6px -2px rgba(37, 99, 235, 0.15);
+}
+
+.btn-enquete:active {
+    transform: translateY(0);
+}
+
+.btn-enquete svg {
+    transition: transform 0.25s ease;
+}
+
+.btn-enquete:hover svg {
+    transform: translate(2px, -2px);
+}
+
+.btn-plan-acces {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background-color: #1e3a8a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+    transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-plan-acces:hover {
+    background-color: #172554;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(30, 58, 138, 0.35);
+}
+
+.btn-plan-acces:active {
+    transform: translateY(0);
+}
+
 /* Pied de page */
 footer {
     background-color: var(--bg-darker);
@@ -346,7 +439,18 @@ footer {
     padding-top: 20px;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    .header-left,
+    .header-right {
+        justify-self: center;
+    }
     .footer-content {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -357,98 +461,4 @@ footer {
     h1 {
         font-size: 1.8rem;
     }
-}
-.btn-enquete {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  color: #ffffff !important;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none !important;
-  padding: 12px 24px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
-  transition: all 0.25s ease;
-}
-
-.btn-enquete:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3), 0 4px 6px -2px rgba(37, 99, 235, 0.15);
-}
-
-.btn-enquete:active {
-  transform: translateY(0);
-}
-
-.btn-enquete svg {
-  transition: transform 0.25s ease;
-}
-
-.btn-enquete:hover svg {
-  transform: translate(2px, -2px);
-}
-.btn-plan-acces {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 22px;
-    background-color: #1e3a8a;
-    color: #ffffff;
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
-    transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .btn-plan-acces:hover {
-    background-color: #172554;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(30, 58, 138, 0.35);
-  }
-
-  .btn-plan-acces:active {
-    transform: translateY(0);
-  }
-
-  .liste-parking {
-    padding-left: 24px; /* Retrait supplémentaire pour la seconde liste */
-  }
-
-  .liste-parking li::marker {
-    color: #f97316; /* Petite puce orange */
-    font-size: 0.9em;
-  }
-.org-section ul.liste-parking {
-    list-style-type: disc !important;
-    list-style-position: outside !important;
-    padding-left: 36px !important; /* Retrait visible depuis la marge gauche */
-    margin-left: 16px !important;
-  }
-
-  .org-section ul.liste-parking li {
-    display: list-item !important;
-    list-style-type: disc !important;
-  }
-
-  .org-section ul.liste-parking li::marker {
-    color: #f97316 !important;
-    font-size: 0.9em;
-  }
-.org-section ul.liste-parking li::before {
-    content: none !important;
-}
-    .org-section ul.liste-parking a {
-    color: #38bdf8;
-    text-decoration: underline;
-}
-
-.org-section ul.liste-parking a:hover {
-    color: #ffffff;
 }
