@@ -1,0 +1,45 @@
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: sans-serif;
+      overflow-x: hidden; /* Évite l'apparition d'une barre de défilement horizontale */
+    }
+
+    .image-animee {
+      position: fixed;
+      width: 200px; /*150px; /* Largeur de votre image */
+      height: auto;
+      z-index: 1000;
+
+      /* Durée totale de 3s pour bien voir les deux étapes du L */
+      animation: trajectoireEnL 4s ease-in-out forwards;
+    }
+
+    @keyframes trajectoireEnL {
+      /* ÉTAPE 1 : Départ tout en haut au centre (hors écran) */
+      0% {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+
+      /* ÉTAPE 2 : Arrivée en bas, toujours au centre (le coin du L) */
+      55% {
+        top: calc(100vh - 20px); /* Descend tout en bas (à 20px du bord) */
+        left: 50%;               /* Reste parfaitement centrée horizontalement */
+        transform: translate(-50%, -100%);
+        opacity: 1;
+      }
+
+      /* ÉTAPE 3 : Glissement vers la droite tout en restant en bas */
+      100% {
+        top: calc(100vh - 20px); /* Reste tout en bas */
+        left: calc(100vw - 20px); /* Va jusqu'au bord droit (à 20px du bord) */
+        transform: translate(-100%, -100%); /* Cale le coin droit de l'image */
+        opacity: 1;
+      }
+    }
