@@ -55,3 +55,44 @@
         opacity: 1;
       }
     }
+.tastit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #facc15; /* Jaune vif */
+    color: #18181b; /* Texte sombre fort contraste */
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 2px solid #18181b;
+    box-shadow: 0 3px 0 #18181b;
+    transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .tastit-btn:hover,
+  .tastit-btn:focus-visible {
+    background-color: #fde047;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 0 #18181b;
+  }
+
+  .tastit-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #18181b;
+  }
+
+  .tastit-giraffe {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+
+  .tastit-sub {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0.85;
+  }
