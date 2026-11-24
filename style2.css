@@ -55,18 +55,27 @@
         opacity: 1;
       }
     }
-.btn-tastit {
+.tastit-row {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    margin-top: 8px;
-    padding: 10px 18px;
-    background-color: #FFD100; /* Jaune Tast'IT */
+    gap: 14px;
+    white-space: nowrap;
+  }
+
+  .btn-tastit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 22px;
+    min-width: max-content;
+    white-space: nowrap; /* Empêche le texte du bouton de passer sur 2 lignes */
+    background-color: #FFD100;
     color: #1D1D1B;
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 0.95rem;
-    line-height: 1.25;
+    line-height: 1;
     text-decoration: none;
     border-radius: 50px;
     border: 2px solid #1D1D1B;
@@ -89,8 +98,8 @@
   }
 
   .btn-tastit img {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     border-radius: 50%;
     background-color: #FFFFFF;
@@ -98,10 +107,10 @@
     flex-shrink: 0;
   }
 
-  .btn-tastit-sub {
-    display: block;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 0.78rem;
-    color: #27272A;
+  /* Sur très petit écran (mobile), autorise le retour à la ligne pour ne pas casser le tableau */
+  @media (max-width: 640px) {
+    .tastit-row {
+      flex-wrap: wrap;
+      white-space: normal;
+    }
   }
